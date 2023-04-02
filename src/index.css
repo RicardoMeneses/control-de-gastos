@@ -97,6 +97,7 @@ header h1 {
   border: none;
   flex: 1;
   font-size: 1.6rem;
+  width: 100%;
 }
 .formulario input[type='submit'] {
   background-color: #1048a4;
@@ -139,6 +140,11 @@ header h1 {
   text-transform: uppercase;
   font-size: 1.8rem;
   text-align: center;
+}
+@media (max-width: 768px) {
+  .alerta {
+    font-size: 0.75rem;
+  }
 }
 .alerta.error {
   background-color: var(--blanco);
@@ -238,6 +244,11 @@ main {
   align-items: center;
   gap: 2rem;
 }
+@media screen and (max-width: 768px) {
+  .filtros .campo {
+    flex-direction: column;
+  }
+}
 .filtros label {
   font-size: 3rem;
   font-weight: 900;
@@ -272,6 +283,11 @@ main {
   margin-bottom: 2rem;
   width: 100%;
 }
+@media screen and (max-width: 768px) {
+  .gasto {
+    flex-direction: column;
+  }
+}
 
 .cantidad-gasto {
   font-size: 2.4rem;
@@ -287,6 +303,11 @@ main {
 
 .contenido-gasto img {
   width: 10rem;
+}
+@media (max-width: 768px) {
+  .contenido-gasto img {
+    width: 4rem;
+  }
 }
 
 .descripcion-gasto p {
@@ -306,6 +327,11 @@ main {
   font-size: 2.4rem;
   font-weight: 700;
 }
+@media screen and (max-width: 768px) {
+  .descripcion-gasto .nombre-gasto {
+    font-size: 1.5rem;
+  }
+}
 .descripcion-gasto .nombre-gasto:hover {
   cursor: pointer;
 }
@@ -313,6 +339,11 @@ main {
   font-size: 1.8rem;
   font-weight: 900;
   color: var(--gris-oscuro);
+}
+@media screen and (max-width: 768px) {
+  .descripcion-gasto .fecha-gasto {
+    font-size: 1.25rem;
+  }
 }
 .descripcion-gasto .fecha-gasto span {
   font-weight: 400;
@@ -341,6 +372,7 @@ main {
 }
 .modal .cerrar-modal {
   position: absolute;
+  z-index: 10;
   right: 3rem;
   top: 3rem;
   width: 3rem;
@@ -357,6 +389,11 @@ main {
   transition-duration: 300ms;
   transition-timing-function: ease-in;
   opacity: 0;
+}
+@media (max-width: 768px) {
+  .modal .formulario {
+    width: fit-content;
+  }
 }
 .modal label {
   color: var(--blanco);

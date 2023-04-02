@@ -18,6 +18,11 @@ const ListadoGastos = ({ gastos, setGastoEditar, eliminarGasto, filtro, gastosFi
       ) : (
         <>
           <h2>{gastos.length ? 'Gastos' : 'No hay gastos aún'}</h2>
+          <h6>
+            {gastos.length
+              ? '* Desliza hacia la izquierda para eliminar o hacia la derecha para editar *'
+              : ''}
+          </h6>
           {gastos.map((gasto) => (
             <Gasto
               key={gasto.id}
